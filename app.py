@@ -9,7 +9,7 @@ from google.oauth2.service_account import Credentials
 # ✅ Google Sheets 저장 함수
 def save_to_gsheet(data: dict):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    creds = Credentials.from_service_account_file("creds.json", scopes=scopes)
+    creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"],scopes=scopes)
     client = gspread.authorize(creds)
 
     # ✅ 여기에 본인의 시트 ID를 넣어주세요
