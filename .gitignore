@@ -1,0 +1,16 @@
+# Google Service Account key
+# 민감한 키 파일은 Git에 올리지 않도록 제외 처리
+creds.json
+*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit
+.streamlit/
+
+creds.json
+__pycache__/
+.env
